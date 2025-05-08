@@ -3,8 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href=".css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Admin Dashboard</title>
   </head>
-  <body></body>
+  <!-- [block]__[element]--[modifier] -->
+  <body>
+    <header>
+      <div class="header-top">
+        <form class="form-searchbar" action="#" method="get">
+          <label class="form-searchbar__label" for="searchbar"></label>
+          <input
+            class="form-searchbar__input"
+            type="text"
+            name="searchbar"
+            id="searchbar"
+          />
+        </form>
+        <div class="notification"></div>
+        <img src="images/wiesel.jpeg" alt="profile image" class="profile-pic" />
+        <p class="name">Jon Doe</p>
+      </div>
+      <div class="header-bottom">
+        <img src="images/wiesel.jpeg" alt="profile image" class="profile-pic" />
+        <p class="welcome-user">
+          Hi there, <br />
+          Jon Doe (@alias)
+        </p>
+        <form class="form-btn form-btn--new" action="#" method="post">
+          <button type="submit" name="action" value="new">New</button>
+        </form>
+        <form class="form-btn form-btn--upload" action="#" method="post">
+          <button type="submit" name="action" value="upload">Upload</button>
+        </form>
+        <form class="form-btn form-btn--share" action="#" method="post">
+          <button type="submit" name="action" value="share">Share</button>
+        </form>
+      </div>
+    </header>
+    <aside>
+      <h2>Dashboard</h2>
+      <nav>
+        <ul class="nav-ul nav-ul--top">
+          <li class="nav_ul__list-item nav_ul__list-item--home">Home</li>
+          <li class="nav_ul__list-item nav_ul__list-item--profile">Profile</li>
+          <li class="nav_ul__list-item nav_ul__list-item--messages">
+            Messages
+          </li>
+          <li class="nav_ul__list-item nav_ul__list-item--history">History</li>
+          <li class="nav_ul__list-item nav_ul__list-item--communities">
+            Communities
+          </li>
+        </ul>
+        <ul class="nav-ul nav-ul--bottom">
+          <li class="nav_ul__list-item nav-ul__list-item--settings">
+            Settings
+          </li>
+          <li class="nav_ul__list-item nav-ul__list-item--support">Support</li>
+          <li class="nav_ul__list-item nav-ul__list-item--privacy">Privacy</li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <div class="main-section main_section--projects">
+        <h3 class="main-section__title_projects">Your Projects</h3>
+        <div class="main-section__card-projects">Dummy</div>
+        <div class="main-section__card-projects">Dummy</div>
+        <div class="main-section__card-projects">Dummy</div>
+        <div class="main-section__card-projects">Dummy</div>
+        <div class="main-section__card-projects">Dummy</div>
+        <div class="main-section__card-projects">Dummy</div>
+      </div>
+      <div class="main-section main-section--announcements">
+        <h3 class="main-section__title_announcements">Announcements</h3>
+        <div class="main-section__card-announcements">Dummy2</div>
+      </div>
+      <div class="main-section main-section--trending">
+        <h3 class="main-section__title_trending">Trending</h3>
+        <div class="main-section__card-trending">Dummy3</div>
+      </div>
+    </main>
+  </body>
 </html>
