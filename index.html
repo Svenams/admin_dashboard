@@ -8,35 +8,56 @@
   </head>
   <!-- [block]__[element]--[modifier] -->
   <body>
-    <header>
-      <div class="header-top">
-        <form class="form-searchbar" action="#" method="get">
-          <label class="form-searchbar__label" for="searchbar"></label>
+    <header class="header">
+      <div class="header__container header--top">
+        <form class="header__form-searchbar" action="#" method="get">
+          <label class="header__label" for="searchbar"></label>
           <input
-            class="form-searchbar__input"
+            class="header__input"
             type="text"
             name="searchbar"
             id="searchbar"
           />
         </form>
-        <div class="notification"></div>
-        <img src="images/wiesel.jpeg" alt="profile image" class="profile-pic" />
-        <p class="name">Jon Doe</p>
+        <div class="header__notification"></div>
+        <img
+          src="images/wiesel.jpeg"
+          alt="profile image"
+          class="header__profile-pic"
+        />
+        <p class="header__name">Jon Doe</p>
       </div>
-      <div class="header-bottom">
-        <img src="images/wiesel.jpeg" alt="profile image" class="profile-pic" />
-        <p class="welcome-user">
+      <div class="header__container header--bottom">
+        <img
+          src="images/wiesel.jpeg"
+          alt="profile image"
+          class="header__profile-pic header__profile-pic--bottom"
+        />
+        <p class="header__welcome-user">
           Hi there, <br />
-          Jon Doe (@alias)
+          <span class="header__name header__name--bottom"
+            >Jon Doe (@alias)</span
+          >
         </p>
-        <form class="form-btn form-btn--new" action="#" method="post">
-          <button type="submit" name="action" value="new">New</button>
+        <form class="header__form-btn" action="#" method="post">
+          <button class="header__btn" type="submit" name="action" value="new">
+            New
+          </button>
         </form>
-        <form class="form-btn form-btn--upload" action="#" method="post">
-          <button type="submit" name="action" value="upload">Upload</button>
+        <form class="header__form-btn" action="#" method="post">
+          <button
+            class="header__btn"
+            type="submit"
+            name="action"
+            value="upload"
+          >
+            Upload
+          </button>
         </form>
-        <form class="form-btn form-btn--share" action="#" method="post">
-          <button type="submit" name="action" value="share">Share</button>
+        <form class="header__form-btn" action="#" method="post">
+          <button class="header__btn" type="submit" name="action" value="share">
+            Share
+          </button>
         </form>
       </div>
     </header>

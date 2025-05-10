@@ -42,8 +42,13 @@ body {
 
 /* ------------------------------------------------ */
 
+:root {
+  --gray: #e2e8f0;
+  --blue: #1a92d3;
+}
+
 /* * {
-  border: 1px solid firebrick;
+  border: 2px solid salmon;
 } */
 
 /* -------------------------------------------- */
@@ -133,38 +138,100 @@ h2 {
 /* ------------ HEADER ------------------ */
 /* -------------------------------------------- */
 
-header {
-  background-color: #aad2bc;
+/* .header-top > * {
+  border: 2px solid firebrick;
+} */
+
+.header {
+  background-color: white;
+  padding-inline: 2rem;
 }
 
-.header-top {
+.header__container {
+  /* border: 2px solid blue; */
   display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  /* flex-wrap: wrap; */
+  padding-block: 2em;
 }
 
-.form-searchbar__label {
+.header__profile-pic {
+  aspect-ratio: 1 / 1;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.header__name {
+  font-weight: 800;
+}
+/* --------- HEADER TOP ---------------- */
+
+.header__form-searchbar {
+  flex-basis: 75%;
+  margin-right: auto;
+}
+
+.header__label {
   background-image: url(./svgs/magnify.svg);
   background-repeat: no-repeat;
+  background-size: cover;
+  overflow: visible;
   padding-left: 1em;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 
-.form-searchbar__input {
-  width: 80ch;
+.header__input {
+  width: 70%;
   border-radius: 12px;
+  padding-block: 0.8em;
+  padding-inline: 1em;
+  background-color: var(--gray);
+  border: none;
 }
 
-.notification {
+.header__input:focus {
+  outline: 2px solid var(--blue);
+}
+
+.header__notification {
   background-image: url(./svgs/bell-ring-outline.svg);
   background-repeat: no-repeat;
   aspect-ratio: 1 / 1;
-  width: 1rem;
+  min-height: 1.7em;
 }
 
-.profile-pic {
-  width: 3rem;
+/* --------- HEADER BOTTOM ---------------- */
+
+/* .header--bottom > * {
+  border: 2px solid orangered;
+} */
+
+.header--bottom {
+  padding-top: 0;
 }
 
-.header-bottom {
-  display: flex;
+.header__welcome-user {
+  margin-right: auto;
+  font-weight: 600;
+}
+
+.header__btn {
+  padding: 1em 3em;
+  border-radius: 1.5em;
+  border: none;
+  background-color: var(--blue);
+  color: white;
+  font-weight: 900;
+}
+
+.header__profile-pic--bottom {
+  width: 5rem;
+}
+
+.header__name--bottom {
+  font-size: 2em;
 }
 
 /* -------------------------------------------- */
