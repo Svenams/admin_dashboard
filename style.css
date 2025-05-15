@@ -87,6 +87,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  color: white;
+  font-size: 1.3em;
 }
 
 .sidebar__nav-ul--top {
@@ -97,6 +99,7 @@ main {
 .sidebar__header {
   background-repeat: no-repeat;
   padding-left: 2em;
+  color: white;
 }
 
 .sidebar__header {
@@ -244,55 +247,88 @@ main {
   grid-template-areas:
     "projects announcements"
     "projects trending";
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
-.main_section--projects {
+.main__container--projects {
   grid-area: projects;
-  background-color: aqua;
+  background-color: var(--gray);
 }
 
-.main-section--announcements {
+.main__container--announcements {
   grid-area: announcements;
   background-color: #afabd7;
 }
 
-.main-section--trending {
+.main__container--trending {
   grid-area: trending;
   background-color: rgb(188, 160, 114);
 }
 
 /* ------------- Main-Projects ---------------- */
 
-.main_section--projects {
+.main__container--projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr repeat(3, 5fr);
+  grid-template-rows: 1fr repeat(3, 5fr) 1fr;
   gap: 1rem;
   padding: 1rem;
 }
 
-.main-section__title_projects {
+.main__title_projects {
   grid-column: span 2;
+  align-self: self-end;
 }
 
-.main-section__card-projects {
-  background-color: lightblue;
+.main__card-projects {
+  background-color: white;
+  padding: 3em 5em 0 2em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  border-left: 1rem solid var(--blue);
+}
+
+.main__card-content {
+  max-width: 30ch; /*roughly 6 words */
+  font-weight: 200;
+}
+
+.main__btn-container {
+  /* border: 2px solid green; */
+  text-align: right;
+}
+
+.main__btn {
+  display: inline-block;
+  /* border: 1px solid black; */
+  margin-right: 0.4em;
+  border: none;
+  margin-top: 3em;
+}
+
+.main__btn-img {
+  aspect-ratio: 1 / 1;
+  width: 2.5em;
+  background-color: white;
+  outline: none;
+}
+
+.main__btn--share {
+  margin-right: 0;
 }
 
 /* ------------- Main-Announcements ---------------- */
 
-.main-section--announcements,
-.main-section--trending {
+.main__container--announcements,
+.main__container--trending {
   display: grid;
   padding: 1rem;
   grid-template-rows: 1fr 4fr;
 }
 
-.main-section__card-announcements,
-.main-section__card-trending {
+.main__card-announcements,
+.main__card-trending {
   border: 2px solid black;
 }
-
 /* ------------- Main-Trending ---------------- */
