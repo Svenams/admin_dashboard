@@ -266,19 +266,22 @@ main {
   background-color: rgb(188, 160, 114);
 }
 
+.main__container {
+  display: grid;
+  padding: 2em 1em 1em 1em;
+  gap: 1rem;
+}
+
 /* ------------- Main-Projects ---------------- */
 
 .main__container--projects {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr repeat(3, 5fr) 1fr;
+  grid-template-rows: 1.75em repeat(3, 5fr) 1fr;
   gap: 1rem;
-  padding: 1rem;
 }
 
-.main__title_projects {
+.main__title--projects {
   grid-column: span 2;
-  align-self: self-end;
 }
 
 .main__card-projects {
@@ -328,13 +331,15 @@ main {
 
 .main__container--announcements,
 .main__container--trending {
-  display: grid;
-  padding: 1rem;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1.75em 4fr;
 }
 
 .main__card-announcements,
 .main__card-trending {
   border: 2px solid black;
+}
+
+.main__title--announcements {
+  /* align-self: self-end; */
 }
 /* ------------- Main-Trending ---------------- */
