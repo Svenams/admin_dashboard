@@ -48,7 +48,7 @@ body {
 }
 
 /* * {
-  border: 2px solid salmon;
+  outline: 2px solid salmon;
 } */
 
 /* -------------------------------------------- */
@@ -88,7 +88,7 @@ main {
   flex-direction: column;
   gap: 1rem;
   color: white;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 .sidebar__nav-ul--top {
@@ -148,7 +148,7 @@ main {
 
 .header {
   background-color: white;
-  padding: 2rem 2rem;
+  padding: 0.5rem 2rem;
 }
 
 .header__container {
@@ -235,7 +235,7 @@ main {
 }
 
 .header__name--bottom {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 /* -------------------------------------------- */
@@ -283,7 +283,9 @@ main {
 
 .main__card-projects {
   background-color: white;
-  padding: 3em 5em 0 2em;
+  display: flex;
+  flex-direction: column;
+  padding: 3em 2em 1.5em 2em;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
   border-left: 1rem solid var(--blue);
@@ -292,24 +294,28 @@ main {
 .main__card-content {
   max-width: 30ch; /*roughly 6 words */
   font-weight: 200;
+  font-size: 0.8em;
+}
+
+.main__card-header {
+  margin-bottom: 0.67em;
 }
 
 .main__btn-container {
-  /* border: 2px solid green; */
   text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5em;
+  margin-top: auto;
 }
 
 .main__btn {
-  display: inline-block;
-  /* border: 1px solid black; */
-  margin-right: 0.4em;
   border: none;
-  margin-top: 3em;
 }
 
 .main__btn-img {
   aspect-ratio: 1 / 1;
-  width: 2.5em;
+  width: 2em;
   background-color: white;
   outline: none;
 }
