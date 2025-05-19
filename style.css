@@ -258,7 +258,7 @@ main {
 
 .main__container--announcements {
   grid-area: announcements;
-  background-color: #afabd7;
+  background-color: var(--gray);
 }
 
 .main__container--trending {
@@ -270,6 +270,12 @@ main {
   display: grid;
   padding: 2em 1em 1em 1em;
   gap: 1rem;
+}
+
+.main__card-content,
+.main__announcement-text {
+  font-weight: 200;
+  font-size: 0.8em;
 }
 
 /* ------------- Main-Projects ---------------- */
@@ -296,8 +302,6 @@ main {
 
 .main__card-content {
   max-width: 30ch; /*roughly 6 words */
-  font-weight: 200;
-  font-size: 0.8em;
 }
 
 .main__card-header {
@@ -334,12 +338,30 @@ main {
   grid-template-rows: 1.75em 4fr;
 }
 
-.main__card-announcements,
+.main__announcement-card,
 .main__card-trending {
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 .main__title--announcements {
   /* align-self: self-end; */
 }
+
+.main__announcement-subcontainer {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1em 2em;
+  border-radius: 0.5rem;
+}
+
+.main__announcement-card {
+  padding-block: 0.8em;
+  border-bottom: 1px solid black;
+}
+
+.main__announcement-card--last {
+  border-bottom: none;
+}
+
 /* ------------- Main-Trending ---------------- */
